@@ -1,0 +1,24 @@
+[
+	{
+		"name":"Einstein",
+		"breed":"Greyador",
+		"vaccinations":[
+			{
+				"name":"Vaccine1",
+				"age":1,
+				"date":"2024-01-31"
+			}
+		]
+	},
+	{
+		"name":"Lassie",
+		"breed":"Border Collie",
+		"vaccinations":[
+			{
+				"name":"Vaccine1",
+				"age":1,
+				"date":"2024-01-31"
+			}
+		]
+	}
+]

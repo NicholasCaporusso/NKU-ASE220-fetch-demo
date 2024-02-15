@@ -1,0 +1,40 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<button id="load">Load pets</button>
+		<script>
+			document.getElementById('load').addEventListener('click',function(){
+
+				// Promises
+				fetch('https://jsonblob.com/api/jsonBlob/1207746472795037696').then(data=>data.json()).then(pet=>{
+					// Running with promises
+					console.log(pet);
+					displayPets(pet);
+				});
+				//processJSON();
+			});
+			
+			// With async/await
+			async function processJSON(){
+				// Running with async/await
+				let data=await fetch('document.json');
+				let pet=await data.json();
+				console.log(pet);
+				displayPets(pet);
+			}
+			
+			
+			function displayPets(pets){
+				for(let i=0;i<pets.length;i++){
+					let el=document.createElement('h1');
+					el.innerText=pets[i].name;
+					document.body.append(el);
+					el=document.createElement('h2');
+					el.innerText=pets[i].breed;
+					document.body.append(el);
+				}
+			}
+		</script>
+	</body>
+</html>
